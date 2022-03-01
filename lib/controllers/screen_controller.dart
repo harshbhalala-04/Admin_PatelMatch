@@ -62,6 +62,7 @@ class ScreenController extends GetxController {
         .collection("users")
         .where("isApproved", isEqualTo: false)
         .where("isRejected", isEqualTo: false)
+        .where("isFieldAnswered", isEqualTo: true)
         .orderBy("createdAt", descending: true)
         .get()
         .then((snapshot) {

@@ -27,7 +27,8 @@ class SingleUserDetail extends StatelessWidget {
 
     String siblingMarriedString = '';
     String siblingTotalString = '';
-    if (currentUser.marriedBrothers != null && currentUser.marriedBrothers != "") {
+    if (currentUser.marriedBrothers != null &&
+        currentUser.marriedBrothers != "") {
       if (int.parse(currentUser.marriedBrothers!) > 0) {
         if (int.parse(currentUser.marriedBrothers!) == 1) {
           siblingMarriedString = siblingMarriedString +
@@ -40,7 +41,8 @@ class SingleUserDetail extends StatelessWidget {
         }
       }
     }
-    if (currentUser.marriedSisters != null && currentUser.marriedSisters != "") {
+    if (currentUser.marriedSisters != null &&
+        currentUser.marriedSisters != "") {
       if (int.parse(currentUser.marriedSisters!) > 0) {
         if (int.parse(currentUser.marriedSisters!) == 1) {
           siblingMarriedString =
@@ -100,18 +102,14 @@ class SingleUserDetail extends StatelessWidget {
                     top: 12,
                     bottom: 12,
                   ),
-                  child: Row(
-                    mainAxisAlignment: MainAxisAlignment.start,
-                    children: [
-                      Text(
-                        '${currentUser.username}, ${currentUser.age}',
-                        textAlign: TextAlign.start,
-                        style: TextStyle(
-                            fontSize: 24,
-                            fontWeight: FontWeight.w700,
-                            color: Color.fromRGBO(51, 51, 51, 1)),
-                      ),
-                    ],
+                  child: Text(
+                    '${currentUser.username}, ${currentUser.age}',
+                    textAlign: TextAlign.start,
+                    maxLines: 2,
+                    style: TextStyle(
+                        fontSize: 24,
+                        fontWeight: FontWeight.w700,
+                        color: Color.fromRGBO(51, 51, 51, 1)),
                   ),
                 ),
                 Padding(

@@ -30,6 +30,8 @@ class TabBarScreenState extends State<TabBarScreen> {
 
   @override
   Widget build(BuildContext context) {
+    print(screenController.currentAdmin.value.adminName);
+    print(screenController.currentAdmin.value.email);
     return Scaffold(
       appBar: PreferredSize(
           preferredSize: Size.fromHeight(80),
